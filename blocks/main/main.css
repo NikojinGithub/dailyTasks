@@ -1,0 +1,9 @@
+.main {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid yellow;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}

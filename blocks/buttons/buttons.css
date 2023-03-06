@@ -1,0 +1,9 @@
+.buttons {
+  width: 95%;
+  height: 30px;
+  margin: 10px auto 10px;
+  border: 1px dashed blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
