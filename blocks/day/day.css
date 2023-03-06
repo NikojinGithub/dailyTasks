@@ -1,0 +1,8 @@
+.day {
+  width: 15%;
+  border: 1px solid yellow;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

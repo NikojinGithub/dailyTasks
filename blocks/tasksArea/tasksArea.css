@@ -1,0 +1,8 @@
+.tasksArea {
+  border: 1px solid white;
+  width: 99%;
+  min-height: 70vh;
+  align-self: center;
+  margin-top: 10px;
+  display: flex;
+}

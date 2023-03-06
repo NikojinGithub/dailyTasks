@@ -5,3 +5,12 @@
 
 @import url(../blocks/buttons/buttons.css);
 @import url(../blocks/buttons/__button/buttons__button.css);
+@import url(../blocks/form/__input/form__input.css);
+
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__button/form__button.css);
+
+@import url(../blocks/tasksArea/tasksArea.css);
+@import url(../blocks/day/day.css);
+@import url(../blocks/day/__title/day__title.css);
+@import url(../blocks/day/__tasks/day__tasks.css);
