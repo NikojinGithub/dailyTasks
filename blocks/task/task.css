@@ -1,0 +1,10 @@
+.task {
+  border: 1px solid white;
+  border-radius: 10px;
+  min-height: 50px;
+  margin: 5px 2px 0;
+  padding: 2px;
+  display: flex;
+  background-color: black;
+  color: white;
+}

@@ -14,3 +14,6 @@
 @import url(../blocks/day/day.css);
 @import url(../blocks/day/__title/day__title.css);
 @import url(../blocks/day/__tasks/day__tasks.css);
+
+@import url(../blocks/task/task.css);
+@import url(../blocks/task/__title/task__title.css);
