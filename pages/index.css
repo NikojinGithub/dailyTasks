@@ -17,3 +17,6 @@
 
 @import url(../blocks/task/task.css);
 @import url(../blocks/task/__title/task__title.css);
+@import url(../blocks/task/__input/task__input.css);
+@import url(../blocks/task/__buttons/task__buttons.css);
+@import url(../blocks/task/__button/task__button.css);

@@ -1,5 +1,7 @@
 .task {
   border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
   border-radius: 10px;
   min-height: 50px;
   margin: 5px 2px 0;
