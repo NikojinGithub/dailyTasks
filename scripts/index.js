@@ -21,14 +21,15 @@ function selectDay(set){
 selectDay(daysWeek);
 
 
-
-
-//Create task
+//Create task, add drag attribute. Add drag listeners.
 function createTask(){
   const task = document.querySelector('#template').content.querySelector('.task').cloneNode(true);
   const taskName = task.querySelector('.task__title');
   taskName.textContent = inputForm.value;
   copyTask(task);
+  task.setAttribute('draggable', true)
+  task.addEventListener('dragstart', startDrag);
+  task.addEventListener('dragend', endDrag);
   return task;
 }
 
@@ -38,8 +39,8 @@ function addTask(evt, days){
   days.forEach(day => {
     const checkbox = day.querySelector('input');
     if(checkbox.checked){
-      const task = day.querySelector('.day__tasks');
-      task.append(createTask())
+      const taskDay = day.querySelector('.day__tasks');
+      taskDay.append(createTask())
     }
   })
   clearInput(inputForm);
@@ -117,3 +118,40 @@ buttonConfirm.addEventListener('click', (evt) => {
   addTask(evt, daysWeek);
   handleEventListeners();
 });
+
+
+//Drag and Drop
+//Find all task on page.
+const tasks = document.querySelectorAll('.task');
+
+//Add listener to all tasks on page.
+tasks.forEach(task => {
+  task.addEventListener('dragstart', startDrag);
+  task.addEventListener('dragend', endDrag);
+})
+
+//Add listeners to all days on page.
+days.forEach(day => {
+  day.addEventListener('dragover', overDrag)
+  day.addEventListener('drop', dropDrag)
+})
+
+//Start drag use class to append after move done.
+function startDrag(evt){
+  evt.target.classList.add('drag');
+}
+//Finish drag.
+function endDrag(evt){
+  evt.target.classList.remove('drag');
+}
+
+//Drag over.
+function overDrag(evt){
+  evt.preventDefault();
+}
+
+//Drop drag. this = day. dragElem find with class from startDrag func.
+function dropDrag(){
+  const dragElem = document.querySelector('.drag')
+  this.append(dragElem);
+}
